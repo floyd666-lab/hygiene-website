@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии — HYGIENE</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="components.js?v=2"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <app-header></app-header>
+
+    <main style="background: #f8faf9; overflow: hidden;">
+        <!-- Hero Section -->
+        <section class="vacancies-hero" style="padding: 180px 0 100px; position: relative;">
+            <div class="bg-blur-circle" style="top: -10%; left: -10%; background: rgba(36, 139, 101, 0.05);"></div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="animate-up">
+                    <span class="section-tag" data-i18n="vacancies_hero_tag">Карьера в HYGIENE</span>
+                    <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--primary); margin-bottom: 25px; font-weight: 700; line-height: 1.1;">
+                        <span data-i18n="vacancies_hero_title">Присоединяйтесь к нашей команде</span>
+                    </h1>
+                    <p data-i18n="vacancies_hero_desc" style="font-size: 1.2rem; color: var(--text-gray); max-width: 600px; line-height: 1.6;">
+                        Мы постоянно растем и ищем талантливых специалистов, готовых развиваться вместе с нами.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vacancies List -->
+        <section style="padding-bottom: 80px;">
+            <div class="container">
+                <h2 data-i18n="vacancies_list_title" style="font-family: 'Outfit', sans-serif; font-size: 32px; color: var(--text-dark); margin-bottom: 40px; text-align: center;">Актуальные вакансии</h2>
+                
+                <div class="vacancies-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                    <!-- Vacancy 1 -->
+                    <div class="glass-card animate-up" style="padding: 35px; border: 1px solid rgba(255,255,255,0.6); display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                        <h3 data-i18n="vac_1_title" style="font-family: 'Outfit', sans-serif; font-size: 22px; color: var(--primary); margin-bottom: 20px; font-weight: 600;">Менеджер по продажам (FMCG)</h3>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Требования:</h4>
+                            <p data-i18n="vac_1_req" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Опыт работы в продажах от 2 лет, знание рынка ритейла.</p>
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Обязанности:</h4>
+                            <p data-i18n="vac_1_duty" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Поиск новых партнеров, ведение переговоров.</p>
+                        </div>
+                        <a href="mailto:hygieneuz@mail.ru" class="btn btn-premium-animated" style="margin-top: auto; padding: 12px; font-size: 14px; justify-content: center;">Откликнуться</a>
+                    </div>
+
+                    <!-- Vacancy 2 -->
+                    <div class="glass-card animate-up" style="padding: 35px; border: 1px solid rgba(255,255,255,0.6); display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                        <h3 data-i18n="vac_2_title" style="font-family: 'Outfit', sans-serif; font-size: 22px; color: var(--primary); margin-bottom: 20px; font-weight: 600;">Оператор линии</h3>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Требования:</h4>
+                            <p data-i18n="vac_2_req" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Техническое образование, готовность к сменному графику.</p>
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Обязанности:</h4>
+                            <p data-i18n="vac_2_duty" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Контроль работы линии, обеспечение качества.</p>
+                        </div>
+                        <a href="mailto:hygieneuz@mail.ru" class="btn btn-premium-animated" style="margin-top: auto; padding: 12px; font-size: 14px; justify-content: center;">Откликнуться</a>
+                    </div>
+
+                    <!-- Vacancy 3 -->
+                    <div class="glass-card animate-up" style="padding: 35px; border: 1px solid rgba(255,255,255,0.6); display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                        <h3 data-i18n="vac_3_title" style="font-family: 'Outfit', sans-serif; font-size: 22px; color: var(--primary); margin-bottom: 20px; font-weight: 600;">Технолог</h3>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Требования:</h4>
+                            <p data-i18n="vac_3_req" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Высшее профильное образование, знание рецептур.</p>
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Обязанности:</h4>
+                            <p data-i18n="vac_3_duty" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Разработка новых видов продукции.</p>
+                        </div>
+                        <a href="mailto:hygieneuz@mail.ru" class="btn btn-premium-animated" style="margin-top: auto; padding: 12px; font-size: 14px; justify-content: center;">Откликнуться</a>
+                    </div>
+
+                    <!-- Vacancy 4 -->
+                    <div class="glass-card animate-up" style="padding: 35px; border: 1px solid rgba(255,255,255,0.6); display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                        <h3 data-i18n="vac_4_title" style="font-family: 'Outfit', sans-serif; font-size: 22px; color: var(--primary); margin-bottom: 20px; font-weight: 600;">Водитель-экспедитор</h3>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Требования:</h4>
+                            <p data-i18n="vac_4_req" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Категории B, C, опыт от 3 лет.</p>
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Обязанности:</h4>
+                            <p data-i18n="vac_4_duty" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Доставка продукции, работа с накладными.</p>
+                        </div>
+                        <a href="mailto:hygieneuz@mail.ru" class="btn btn-premium-animated" style="margin-top: auto; padding: 12px; font-size: 14px; justify-content: center;">Откликнуться</a>
+                    </div>
+
+                    <!-- Vacancy 5 -->
+                    <div class="glass-card animate-up" style="padding: 35px; border: 1px solid rgba(255,255,255,0.6); display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                        <h3 data-i18n="vac_5_title" style="font-family: 'Outfit', sans-serif; font-size: 22px; color: var(--primary); margin-bottom: 20px; font-weight: 600;">Бухгалтер-кассир</h3>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Требования:</h4>
+                            <p data-i18n="vac_5_req" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Знание 1С, опыт от 2 лет.</p>
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Обязанности:</h4>
+                            <p data-i18n="vac_5_duty" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Кассовые операции, первичная документация.</p>
+                        </div>
+                        <a href="mailto:hygieneuz@mail.ru" class="btn btn-premium-animated" style="margin-top: auto; padding: 12px; font-size: 14px; justify-content: center;">Откликнуться</a>
+                    </div>
+
+                    <!-- Vacancy 6 -->
+                    <div class="glass-card animate-up" style="padding: 35px; border: 1px solid rgba(255,255,255,0.6); display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                        <h3 data-i18n="vac_6_title" style="font-family: 'Outfit', sans-serif; font-size: 22px; color: var(--primary); margin-bottom: 20px; font-weight: 600;">Работник склада</h3>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Требования:</h4>
+                            <p data-i18n="vac_6_req" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Выносливость, дисциплинированность.</p>
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="font-size: 14px; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; letter-spacing: 1px;">Обязанности:</h4>
+                            <p data-i18n="vac_6_duty" style="font-size: 15px; color: var(--text-gray); line-height: 1.5;">Прием и отгрузка товара, комплектация.</p>
+                        </div>
+                        <a href="mailto:hygieneuz@mail.ru" class="btn btn-premium-animated" style="margin-top: auto; padding: 12px; font-size: 14px; justify-content: center;">Откликнуться</a>
+                    </div>
+                </div>
+
+                <!-- Email CTA -->
+                <div class="glass-card animate-up" style="padding: 50px; text-align: center; border: 1px solid rgba(255,255,255,0.6); background: rgba(36,139,101,0.03);">
+                    <h2 data-i18n="vacancies_empty_title" style="font-family: 'Outfit', sans-serif; font-size: 24px; margin-bottom: 15px; color: var(--text-dark);">Не нашли подходящую вакансию?</h2>
+                    <p data-i18n="vacancies_empty_desc" style="font-size: 16px; color: var(--text-gray); max-width: 500px; margin: 0 auto 30px;">Отправьте свое резюме нам на почту, и мы свяжемся с вами!</p>
+                    <a href="mailto:hygieneuz@mail.ru" style="font-size: 18px; font-weight: 700; color: var(--primary); text-decoration: none; border-bottom: 2px solid var(--primary); padding-bottom: 5px;">hygieneuz@mail.ru</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Set initial state to avoid flash
+            gsap.set('.animate-up', { y: 60, opacity: 0 });
+
+            // Animate each element individually when it enters view
+            const elements = document.querySelectorAll('.animate-up');
+            elements.forEach((el, index) => {
+                gsap.to(el, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 90%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

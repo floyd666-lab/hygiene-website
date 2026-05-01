@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Производство — HYGIENE</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="components.js?v=2"></script>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <app-header></app-header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="hero-bg-elements">
+                <div class="particle p1"></div>
+                <div class="particle p2"></div>
+            </div>
+            <div class="container animate-up">
+                <h1 data-i18n="nav_production">Производство</h1>
+                <p data-i18n="production_title">Как рождается чистота</p>
+            </div>
+        </section>
+
+        <!-- Mesmerizing Bento Video Gallery (Apple Style) -->
+        <section class="section" style="padding: 100px 0; background: #fbfbfb; overflow: hidden;">
+            <div class="container">
+                <div class="section-header animate-up" style="margin-bottom: 60px; text-align: center;">
+                    <span class="section-tag" data-i18n="tag_gallery">ТЕХНОЛОГИИ</span>
+                    <h2 class="section-title" data-i18n="gallery_title">Процесс создания, отточенный до совершенства</h2>
+                </div>
+
+                <div class="production-bento-grid animate-up">
+                    <!-- Tile 1: Large Featured -->
+                    <div class="bento-item featured">
+                        <div class="bento-video-box">
+                            <div class="play-trigger">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="bento-overlay">
+                            <div class="bento-meta">
+                                <span class="bento-num">01</span>
+                                <h4 data-i18n="vid_label_1">Подготовка сырья</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tile 2: Tall -->
+                    <div class="bento-item tall">
+                        <div class="bento-video-box">
+                            <div class="play-trigger">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="bento-overlay small">
+                            <div class="bento-meta">
+                                <span class="bento-num">02</span>
+                                <h4 data-i18n="vid_label_2">Смешивание</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tile 3: Tall -->
+                    <div class="bento-item tall">
+                        <div class="bento-video-box">
+                            <div class="play-trigger">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="bento-overlay">
+                            <div class="bento-meta">
+                                <span class="bento-num">03</span>
+                                <h4 data-i18n="vid_label_3">Линия пропитки</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tile 4: Featured (Large) -->
+                    <div class="bento-item featured">
+                        <div class="bento-video-box">
+                            <div class="play-trigger">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="bento-overlay">
+                            <div class="bento-meta">
+                                <span class="bento-num">04</span>
+                                <h4 data-i18n="vid_label_4">Упаковочный цех</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tile 5: Tall -->
+                    <div class="bento-item tall">
+                        <div class="bento-video-box">
+                            <div class="play-trigger">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="bento-overlay small">
+                            <div class="bento-meta">
+                                <span class="bento-num">05</span>
+                                <h4 data-i18n="vid_label_5">Контроль</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tile 6: Tall -->
+                    <div class="bento-item tall">
+                        <div class="bento-video-box">
+                            <div class="play-trigger">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="bento-overlay small">
+                            <div class="bento-meta">
+                                <span class="bento-num">06</span>
+                                <h4 data-i18n="vid_label_6">Логистика</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .production-bento-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-auto-rows: 200px;
+                    gap: 24px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+                .bento-item {
+                    position: relative;
+                    border-radius: 32px;
+                    overflow: hidden;
+                    background: #000;
+                    cursor: pointer;
+                    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+                    border: 1px solid rgba(0,0,0,0.05);
+                }
+                .bento-item.featured { grid-column: span 2; grid-row: span 2; }
+                .bento-item.wide { grid-column: span 2; }
+                .bento-item.tall { grid-row: span 2; }
+                
+                .bento-video-box {
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(135deg, #111 0%, #000 100%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                }
+                .bento-video-box::after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: radial-gradient(circle at center, rgba(36,139,101,0.1) 0%, transparent 70%);
+                    opacity: 0;
+                    transition: opacity 0.5s;
+                }
+                .bento-item:hover {
+                    transform: scale(1.02) translateY(-5px);
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+                }
+                .bento-item:hover .bento-video-box::after {
+                    opacity: 1;
+                }
+                
+                .play-trigger {
+                    width: 50px;
+                    height: 50px;
+                    background: rgba(255,255,255,0.1);
+                    backdrop-filter: blur(10px);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    border: 1px solid rgba(255,255,255,0.2);
+                    transition: all 0.4s;
+                    z-index: 2;
+                }
+                .bento-item:hover .play-trigger {
+                    background: #fff;
+                    color: #000;
+                    transform: scale(1.1);
+                }
+                
+                .bento-overlay {
+                    position: absolute;
+                    inset: 0;
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+                    pointer-events: none;
+                }
+                .bento-overlay.small { padding: 20px; }
+                .bento-meta { display: flex; flex-direction: column; gap: 5px; }
+                .bento-num {
+                    font-family: 'Outfit', sans-serif;
+                    font-weight: 800;
+                    font-size: 12px;
+                    color: var(--primary);
+                    letter-spacing: 1px;
+                }
+                .bento-overlay h4 {
+                    font-family: 'Outfit', sans-serif;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin: 0;
+                }
+                .bento-overlay.small h4 { font-size: 16px; }
+
+                @media (max-width: 992px) {
+                    .production-bento-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-auto-rows: 180px;
+                    }
+                }
+                @media (max-width: 576px) {
+                    .production-bento-grid {
+                        grid-template-columns: 1fr;
+                        grid-auto-rows: 200px;
+                    }
+                    .bento-item.featured, .bento-item.wide, .bento-item.tall { grid-column: span 1; grid-row: span 1; }
+                }
+            </style>
+        </section>
+
+        <!-- Interactive Production Cycle Section -->
+        <section class="section" style="padding: 120px 0; background: #fff; overflow: hidden; position: relative;">
+            <div class="container">
+                <div class="section-header text-center animate-up">
+                    <span class="section-tag" data-i18n="prod_cycle_tag">ПРОЦЕСС</span>
+                    <h2 class="section-title" data-i18n="prod_cycle_title">Цикл Производства</h2>
+                    <p data-i18n="prod_cycle_desc" style="color: var(--text-gray); max-width: 600px; margin: 0 auto; font-size: 18px;">Отборное сырье проходит сложный высокотехнологичный путь, прежде чем попадет к вам в руки.</p>
+                </div>
+
+                <!-- Timeline UI -->
+                <div class="production-timeline animate-up">
+                    <div class="timeline-line">
+                        <div class="timeline-progress" id="timeline-progress"></div>
+                    </div>
+                    <div class="timeline-steps">
+                        <div class="timeline-step active" data-index="0">
+                            <span class="step-dot"></span>
+                            <span class="step-label">01</span>
+                        </div>
+                        <div class="timeline-step" data-index="1">
+                            <span class="step-dot"></span>
+                            <span class="step-label">02</span>
+                        </div>
+                        <div class="timeline-step" data-index="2">
+                            <span class="step-dot"></span>
+                            <span class="step-label">03</span>
+                        </div>
+                        <div class="timeline-step" data-index="3">
+                            <span class="step-dot"></span>
+                            <span class="step-label">04</span>
+                        </div>
+                        <div class="timeline-step" data-index="4">
+                            <span class="step-dot"></span>
+                            <span class="step-label">05</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper cycle-slider animate-up">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Stage 1 -->
+                        <div class="swiper-slide">
+                            <div class="cycle-card">
+                                <div class="cycle-img">
+                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Stage 1">
+                                    <div class="cycle-number">01</div>
+                                </div>
+                                <div class="cycle-content">
+                                    <h3 class="cycle-title" data-i18n="prod_stage_1_title">Водоподготовка</h3>
+                                    <p class="cycle-desc" data-i18n="prod_stage_1_desc">Семиступенчатая фильтрация воды (обратный осмос и УФ-обеззараживание) для достижения абсолютной медицинской чистоты.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 2 -->
+                        <div class="swiper-slide">
+                            <div class="cycle-card">
+                                <div class="cycle-img">
+                                    <img src="https://images.unsplash.com/photo-1614935151651-0bea6508abb0?auto=format&fit=crop&w=800&q=80" alt="Stage 2">
+                                    <div class="cycle-number">02</div>
+                                </div>
+                                <div class="cycle-content">
+                                    <h3 class="cycle-title" data-i18n="prod_stage_2_title">Создание лосьона</h3>
+                                    <p class="cycle-desc" data-i18n="prod_stage_2_desc">Смешивание гипоаллергенных эссенций, витаминов E и экстракта алоэ в закрытых реакторах со строгим контролем pH-баланса.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 3 -->
+                        <div class="swiper-slide">
+                            <div class="cycle-card">
+                                <div class="cycle-img">
+                                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=800&q=80" alt="Stage 3">
+                                    <div class="cycle-number">03</div>
+                                </div>
+                                <div class="cycle-content">
+                                    <h3 class="cycle-title" data-i18n="prod_stage_3_title">Нарезка и пропитка</h3>
+                                    <p class="cycle-desc" data-i18n="prod_stage_3_desc">Нетканое европейское полотно нарезается и пропитывается. Процесс изолирован в стерильной зоне (класс чистоты A).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 4 -->
+                        <div class="swiper-slide">
+                            <div class="cycle-card">
+                                <div class="cycle-img">
+                                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" alt="Stage 4">
+                                    <div class="cycle-number">04</div>
+                                </div>
+                                <div class="cycle-content">
+                                    <h3 class="cycle-title" data-i18n="prod_stage_4_title">Лаборатория и ОТК</h3>
+                                    <p class="cycle-desc" data-i18n="prod_stage_4_desc">Обязательное тестирование образцов каждой партии: проверка микробиологии, прочности на разрыв и герметичности запайки.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 5 -->
+                        <div class="swiper-slide">
+                            <div class="cycle-card">
+                                <div class="cycle-img">
+                                    <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=800&q=80" alt="Stage 5">
+                                    <div class="cycle-number">05</div>
+                                </div>
+                                <div class="cycle-content">
+                                    <h3 class="cycle-title" data-i18n="prod_stage_5_title">Роботизированная упаковка</h3>
+                                    <p class="cycle-desc" data-i18n="prod_stage_5_desc">Приклейка клапана и финальная упаковка со скоростью до 120 пачек в минуту. Без единого касания человеческих рук.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .production-timeline {
+                    max-width: 800px;
+                    margin: 50px auto 80px;
+                    position: relative;
+                    padding: 0 40px;
+                }
+                .timeline-line {
+                    position: absolute;
+                    top: 25px;
+                    left: 40px;
+                    right: 40px;
+                    height: 2px;
+                    background: #eee;
+                    z-index: 1;
+                }
+                .timeline-progress {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 0%;
+                    background: var(--primary);
+                    transition: width 0.5s ease;
+                }
+                .timeline-steps {
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    z-index: 2;
+                }
+                .timeline-step {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+                    width: 50px;
+                }
+                .step-dot {
+                    width: 14px;
+                    height: 14px;
+                    background: #fff;
+                    border: 2px solid #eee;
+                    border-radius: 50%;
+                    margin-bottom: 10px;
+                    transition: all 0.3s ease;
+                }
+                .timeline-step.active .step-dot {
+                    background: var(--primary);
+                    border-color: var(--primary);
+                    box-shadow: 0 0 0 5px rgba(36, 139, 101, 0.2);
+                    transform: scale(1.3);
+                }
+                .step-label {
+                    font-family: 'Outfit', sans-serif;
+                    font-weight: 700;
+                    color: #ccc;
+                    transition: color 0.3s;
+                }
+                .timeline-step.active .step-label {
+                    color: var(--primary);
+                }
+                
+                .cycle-slider {
+                    padding: 20px 0 80px !important;
+                    overflow: visible; 
+                }
+                .cycle-card {
+                    background: #fff;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+                    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    height: 100%;
+                    border: 1px solid rgba(0,0,0,0.03);
+                    display: flex;
+                    flex-direction: column;
+                }
+                .cycle-card:hover {
+                    transform: translateY(-15px);
+                    box-shadow: 0 30px 60px rgba(36,139,101,0.12);
+                }
+                .cycle-img {
+                    width: 100%;
+                    height: 300px;
+                    position: relative;
+                    overflow: hidden;
+                }
+                .cycle-img img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .cycle-number {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    background: rgba(255,255,255,0.9);
+                    backdrop-filter: blur(10px);
+                    color: var(--primary);
+                    font-weight: 800;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 15px;
+                }
+                .cycle-content {
+                    padding: 40px;
+                    flex-grow: 1;
+                }
+                .cycle-title {
+                    font-family: 'Outfit', sans-serif;
+                    font-size: 26px;
+                    margin-bottom: 15px;
+                    color: var(--text-dark);
+                }
+                .cycle-desc {
+                    color: var(--text-gray);
+                    line-height: 1.7;
+                    font-size: 16px;
+                }
+                .cycle-slider .swiper-slide {
+                    width: 500px;
+                    transition: all 0.5s;
+                    opacity: 0.4;
+                    filter: blur(4px) grayscale(1);
+                }
+                .cycle-slider .swiper-slide-active {
+                    opacity: 1;
+                    filter: blur(0) grayscale(0);
+                }
+
+                @media (max-width: 768px) {
+                    .cycle-slider .swiper-slide { width: 85%; }
+                    .production-timeline { display: none; }
+                }
+            </style>
+        </section>
+    </main>
+
+    <app-footer></app-footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof Swiper !== 'undefined') {
+                const cycleSwiper = new Swiper('.cycle-slider', {
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    speed: 1000,
+                    grabCursor: true,
+                    mousewheel: {
+                        invert: false,
+                        forceToAxis: true,
+                    },
+                    on: {
+                        slideChange: function() {
+                            updateTimeline(this.activeIndex);
+                        }
+                    }
+                });
+
+                const steps = document.querySelectorAll('.timeline-step');
+                const progress = document.getElementById('timeline-progress');
+
+                function updateTimeline(index) {
+                    steps.forEach((step, i) => {
+                        step.classList.toggle('active', i === index);
+                    });
+                    
+                    const percent = (index / (steps.length - 1)) * 100;
+                    if(progress) progress.style.width = percent + '%';
+                }
+
+                steps.forEach((step, index) => {
+                    step.addEventListener('click', () => {
+                        cycleSwiper.slideTo(index);
+                    });
+                    
+                    // Magnetic effect for steps
+                    step.addEventListener('mousemove', (e) => {
+                        const rect = step.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        gsap.to(step.querySelector('.step-dot'), {
+                            x: x * 0.4,
+                            y: y * 0.4,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    step.addEventListener('mouseleave', () => {
+                        gsap.to(step.querySelector('.step-dot'), {
+                            x: 0,
+                            y: 0,
+                            duration: 0.5,
+                            ease: "elastic.out(1, 0.3)"
+                        });
+                    });
+                });
+
+                // 3D Tilt Effect for Cycle Cards
+                document.querySelectorAll('.cycle-card').forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        
+                        const rotateX = (y - centerY) / 15;
+                        const rotateY = (centerX - x) / 15;
+                        
+                        gsap.to(card, {
+                            rotateX: rotateX,
+                            rotateY: rotateY,
+                            scale: 1.02,
+                            duration: 0.5,
+                            ease: "power2.out"
+                        });
+                        
+                        gsap.to(card.querySelector('img'), {
+                            x: (x - centerX) / 20,
+                            y: (y - centerY) / 20,
+                            duration: 0.5,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        gsap.to(card, {
+                            rotateX: 0,
+                            rotateY: 0,
+                            scale: 1,
+                            duration: 0.8,
+                            ease: "power2.out"
+                        });
+                        gsap.to(card.querySelector('img'), {
+                            x: 0,
+                            y: 0,
+                            duration: 0.8
+                        });
+                    });
+                });
+            }
+
+            // Simple reveal for videos
+            const videos = document.querySelectorAll('.production-video');
+            videos.forEach(v => {
+                v.play().catch(() => {
+                    // Autoplay might be blocked, add click-to-play as fallback
+                    v.parentElement.addEventListener('click', () => v.play());
+                });
+            });
+        });
+    </script>
+</body>
+</html>
