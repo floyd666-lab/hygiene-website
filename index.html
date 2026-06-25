@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYGIENE | Чистота и Забота в Каждом Движении</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Swiper CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="components.js?v=2"></script>
+    <!-- Mobile-specific fixes -->
+    <style>
+        @media (max-width: 768px) {
+            .video-accordion {
+                flex-direction: column !important;
+                height: auto !important;
+                gap: 10px !important;
+            }
+            .video-accordion-item {
+                height: 200px !important;
+                flex: none !important;
+                border-radius: 16px !important;
+            }
+            .video-accordion-item.active,
+            .video-accordion-item:hover {
+                height: 280px !important;
+                flex: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <app-header></app-header>
+
+    <main>
+        <div class="hero-luxury-wrap">
+            <!-- Giant Background Typography -->
+            <div class="hero-bg-text">HYGIENE</div>
+
+            <div class="hero-luxury-content">
+                <div class="luxury-info">
+                    <!-- <div class="luxury-badge" data-i18n="hero_badge">EST. QUALITY 2024</div> -->
+                    <h1 class="luxury-title">
+                        <span class="lux-word" data-i18n="hero_title_row1">HYGIENE</span>
+                        <span class="lux-word" data-i18n="hero_title_row2">всегда с Вами</span>
+                    </h1>
+                    <p class="luxury-lead" data-i18n="hero_subtitle">Производство влажных салфеток для ежедневной гигиены.</p>
+
+                    <div class="luxury-cta-wrap">
+                        <a href="products.html" class="btn-minimal-luxury">
+                            <span data-i18n="btn_catalog">DISCOVER COLLECTION</span>
+                            <div class="btn-line"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="luxury-visual-stage">
+                    <!-- Multi-Product Hero Showcase -->
+                    <div class="luxury-product-main">
+                        <div class="hero-product-slider">
+                            <img src="assets/products/bloomy120.png" alt="Bloomy 120" class="main-lux-img active">
+                            <img src="assets/products/baby120.png" alt="Baby 120" class="main-lux-img">
+                            <img src="assets/products/72.png" alt="ECO 72" class="main-lux-img">
+                            <img src="assets/products/baby72.png" alt="Baby 72" class="main-lux-img">
+                        </div>
+                        <div class="lux-reflection"></div>
+                        <div class="lux-glow-ring"></div>
+                    </div>
+
+                    <!-- Abstract Liquid Elements (Water Drops) -->
+                    <div class="glass-element ge-1"></div>
+                    <div class="glass-element ge-2"></div>
+                    <div class="glass-element ge-3"></div>
+                    <div class="glass-element ge-4"></div>
+                    <div class="glass-element ge-5"></div>
+                    <div class="glass-element ge-6"></div>
+                    <div class="glass-element ge-7"></div>
+                </div>
+            </div>
+
+            <!-- Ambient Pure Elements -->
+            <div class="pure-light-source"></div>
+        </div>
+
+        <!-- Interactive Assortment Showcase (Sunlight Style) -->
+        <section class="assortment-showcase" id="products">
+            <div class="assortment-bg">
+                <div class="bg-left"></div>
+                <div class="bg-right"></div>
+            </div>
+
+            <div class="container">
+                <div class="assortment-header text-center animate-up">
+                    <span class="section-tag" data-i18n="tag_products">Наши преимущества</span>
+                    <h2 class="section-title" data-i18n="products_title">Выбирайте лучшее для Вас</h2>
+                </div>
+
+                <div class="assortment-grid">
+                    <!-- Left: The Packs (Animated) -->
+                    <div class="assortment-visual-wrap">
+                        <div class="assortment-visual">
+                            <div class="packs-container">
+                                <div class="pack pack-side pack-left">
+                                    <img src="assets/products/baby120.png" alt="Pack Left" class="pack-img-float float-left">
+                                </div>
+                                <div class="pack pack-side pack-right">
+                                    <img src="assets/products/72.png" alt="Pack Right" class="pack-img-float float-right">
+                                </div>
+                                <div class="pack pack-main">
+                                    <img src="assets/products/bloomy120.png" alt="Main Pack" class="pack-img-float float-main">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="assortment-cta">
+                            <a href="about.html" class="btn-minimal-luxury">
+                                <span data-i18n="btn_about_company">О КОМПАНИИ</span>
+                                <div class="btn-line"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Features / Pluses -->
+                    <div class="features-column">
+                        <div class="feature-item-v2">
+                            <div class="feature-icon-v2">
+                                <i data-lucide="cpu"></i>
+                            </div>
+                            <div class="feature-text-v2">
+                                <h4 data-i18n="f1_title">Современное оборудование</h4>
+                                <p data-i18n="f1_desc">Автоматизированные линии обеспечивают высокую скорость и идеальную гигиеничность.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item-v2">
+                            <div class="feature-icon-v2">
+                                <i data-lucide="sparkles"></i>
+                            </div>
+                            <div class="feature-text-v2">
+                                <h4 data-i18n="f2_title">Дизайн и аромат</h4>
+                                <p data-i18n="f2_desc">Привлекательная упаковка и уникальные парфюмированные отдушки.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item-v2">
+                            <div class="feature-icon-v2">
+                                <i data-lucide="gem"></i>
+                            </div>
+                            <div class="feature-text-v2">
+                                <h4 data-i18n="f3_title">Цена и качество</h4>
+                                <p data-i18n="f3_desc">Оптимальный баланс стоимости и премиальных стандартов продукции.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item-v2">
+                            <div class="feature-icon-v2">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <div class="feature-text-v2">
+                                <h4 data-i18n="f4_title">Контроль производства</h4>
+                                <p data-i18n="f4_desc">Тщательный лабораторный контроль каждой партии готового товара.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Production Videos Showcase -->
+        <section class="section" id="production-videos" style="background: var(--bg-light);">
+            <div class="container animate-up">
+                <div class="section-header text-center">
+                    <h2 class="section-title" data-i18n="production_title">За кулисами</h2>
+                    <p style="max-width: 700px; margin: 20px auto 40px; color: var(--text-gray); font-size: 1.1rem;"
+                        data-i18n="production_desc">Делимся секретами — загляните на производство и посмотрите, как создаётся каждая салфетка.</p>
+                </div>
+
+                <div class="video-accordion animate-up"
+                    onmouseenter="this.querySelectorAll('.active').forEach(e => e.classList.remove('active'))">
+                    <div class="video-accordion-item active" onclick="toggleAccordion(this)">
+                        <video class="production-video" autoplay muted loop playsinline style="background: #111;">
+                            <source src="assets/production/placeholder_1.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-accordion-overlay">
+                            <div class="video-accordion-title" data-i18n="vid_title_1">Стерильная линия</div>
+                            <div class="video-accordion-desc" data-i18n="vid_desc_1">Контроль чистоты на каждом этапе
+                                производства</div>
+                        </div>
+                    </div>
+
+                    <div class="video-accordion-item" onclick="toggleAccordion(this)">
+                        <video class="production-video" autoplay muted loop playsinline style="background: #222;">
+                            <source src="assets/production/placeholder_2.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-accordion-overlay">
+                            <div class="video-accordion-title" data-i18n="vid_title_2">Контроль качества</div>
+                            <div class="video-accordion-desc" data-i18n="vid_desc_2">Лабораторные тесты каждой партии
+                                продукции</div>
+                        </div>
+                    </div>
+
+                    <div class="video-accordion-item" onclick="toggleAccordion(this)">
+                        <video class="production-video" autoplay muted loop playsinline style="background: #333;">
+                            <source src="assets/production/vid_8 zameshivanie.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-accordion-overlay">
+                            <div class="video-accordion-title" data-i18n="vid_title_3">Ингредиенты</div>
+                            <div class="video-accordion-desc" data-i18n="vid_desc_3">Добавление качественных натуральных
+                                компонентов</div>
+                        </div>
+                    </div>
+
+                    <div class="video-accordion-item" onclick="toggleAccordion(this)">
+                        <video class="production-video" autoplay muted loop playsinline style="background: #444;">
+                            <source src="assets/production/placeholder_4.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-accordion-overlay">
+                            <div class="video-accordion-title" data-i18n="vid_title_4">Упаковка</div>
+                            <div class="video-accordion-desc" data-i18n="vid_desc_4">Финальный этап и герметизация
+                                продукции</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 50px;">
+                    <a href="production.html" class="btn btn-primary" data-i18n="btn_details">Подробнее</a>
+                </div>
+            </div>
+
+            <script>
+                function toggleAccordion(element) {
+                    const items = document.querySelectorAll('.video-accordion-item');
+                    items.forEach(item => item.classList.remove('active'));
+                    element.classList.add('active');
+                }
+            </script>
+
+            <style>
+                .video-accordion {
+                    display: flex;
+                    gap: 15px;
+                    height: 500px;
+                    width: 100%;
+                    margin-top: 40px;
+                }
+
+                .video-accordion-item {
+                    flex: 1;
+                    position: relative;
+                    border-radius: 30px;
+                    background: #000;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+                }
+
+                .video-accordion-item:hover,
+                .video-accordion-item.active {
+                    flex: 4;
+                }
+
+                .video-accordion-item video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.6;
+                    transition: opacity 0.6s ease;
+                }
+
+                .video-accordion-item:hover video,
+                .video-accordion-item.active video {
+                    opacity: 1;
+                }
+
+                .video-accordion-overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 40px;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+                    color: white;
+                    transform: translateY(100%);
+                    transition: transform 0.6s ease;
+                }
+
+                .video-accordion-item:hover .video-accordion-overlay,
+                .video-accordion-item.active .video-accordion-overlay {
+                    transform: translateY(0);
+                }
+
+                .video-accordion-title {
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                    font-family: 'Outfit', sans-serif;
+                }
+
+                .video-accordion-desc {
+                    font-size: 16px;
+                    opacity: 0.8;
+                }
+            </style>
+        </section>
+
+        <!-- 
+        <section class="we-produce-section section" id="assortment">
+            <div class="production-watermark">PRODUCTS</div>
+            <div class="container">
+                <div class="section-header text-center animate-up">
+                    <span class="section-tag" data-i18n="production_tag">Our Manufacturing</span>
+                    <h2 class="section-title" data-i18n="we_produce_title">Мы производим</h2>
+                    <p class="section-subtitle" data-i18n="production_subtitle">Широкий ассортимент продукции для вашей
+                        гигиены</p>
+                </div>
+
+                <div class="production-grid animate-up">
+                    <div class="prod-card">
+                        <div class="prod-icon-wrap">
+                            <img src="assets/icons/cat-wet-wipes.png" alt="Icon">
+                        </div>
+                        <h3 class="prod-card-title" data-i18n="cat_wet">Влажные салфетки</h3>
+                    </div>
+                    <div class="prod-card">
+                        <div class="prod-icon-wrap">
+                            <img src="assets/icons/cat-roll.png" alt="Icon">
+                        </div>
+                        <h3 class="prod-card-title" data-i18n="cat_towels">Бумажные полотенца</h3>
+                    </div>
+                    <div class="prod-card">
+                        <div class="prod-icon-wrap">
+                            <img src="assets/icons/cat-tissue.png" alt="Icon">
+                        </div>
+                        <h3 class="prod-card-title" data-i18n="cat_dry">Сухие салфетки</h3>
+                    </div>
+                    <div class="prod-card">
+                        <div class="prod-icon-wrap">
+                            <img src="assets/icons/cat-pad.png" alt="Icon">
+                        </div>
+                        <h3 class="prod-card-title" data-i18n="cat_pads">Гигиенические прокладки</h3>
+                    </div>
+                    <div class="prod-card">
+                        <div class="prod-icon-wrap">
+                            <img src="assets/icons/cat-sanitizer.png" alt="Icon">
+                        </div>
+                        <h3 class="prod-card-title" data-i18n="cat_antiseptics">Антисептики и мыло</h3>
+                    </div>
+                    <div class="prod-card">
+                        <div class="prod-icon-wrap">
+                            <img src="assets/icons/cat-spray.png" alt="Icon">
+                        </div>
+                        <h3 class="prod-card-title" data-i18n="cat_household">Бытовая химия</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- Premium Testimonials: Voice of Quality -->
+        <!-- OLD REVIEWS COMMENTED OUT PER USER REQUEST
+        <section class="voice-of-quality-section section" id="testimonials-old" style="display: none;">
+            ...
+        </section>
+        -->
+
+        <!-- NEW Premium Testimonials: Multi-Language & Segmented -->
+        <section class="new-reviews-section section" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center animate-up">
+                    <span class="section-tag" data-i18n="testi_tag">Social Proof</span>
+                    <h2 class="section-title" data-i18n="testi_title">Отзывы наших клиентов</h2>
+                    <p class="section-subtitle" data-i18n="testi_subtitle">Доверие миллионов семей и партнеров</p>
+                </div>
+
+                <div class="reviews-v2-container">
+                    <div class="swiper reviews-v2-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Review 1: Buyer (RU) -->
+                            <div class="swiper-slide">
+                                <div class="review-card buyer-card animate-up">
+                                    <div class="review-badge buyer-badge" data-i18n="label_regular_client">Покупатель</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">Лучшие салфетки, которыми мы пользовались. Очень мягкие и не вызывают раздражения у ребенка. Всегда берем пачку 120 штук.</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev1.png" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">Дильноза Каримова</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 2: Corporate (UZ) -->
+                            <div class="swiper-slide">
+                                <div class="review-card corporate-card animate-up">
+                                    <div class="review-badge corporate-badge" data-i18n="label_distributor">Корпоративный клиент</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">Distribyutsiya bo'yicha 5 yildan ortiq vaqtdan beri hamkorlik qilamiz. Mahsulot sifati barqaror va logistika a'lo darajada. Mijozlar aynan HYGIENE mahsulotini so'rashmoqda.</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev2.png" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">Azizbek Mansurov</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 3: Buyer (EN) -->
+                            <div class="swiper-slide">
+                                <div class="review-card buyer-card animate-up">
+                                    <div class="review-badge buyer-badge" data-i18n="label_verified_buyer">Покупатель</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">Premium packaging design and the product quality itself are top-notch. Our whole family uses it every day.</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev3.png" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">Nigora Yusupova</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 4: Corporate (RU) -->
+                            <div class="swiper-slide">
+                                <div class="review-card corporate-card animate-up">
+                                    <div class="review-badge corporate-badge" data-i18n="label_partner_retail">Корпоративный клиент</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">Надежный партнер для нашей розничной сети. Всегда вовремя и без брака.</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev4.png" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">Фаррух Тошматов</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 5: Corporate (EN) -->
+                            <div class="swiper-slide">
+                                <div class="review-card corporate-card animate-up">
+                                    <div class="review-badge corporate-badge" data-i18n="label_corp_client">Корпоративный клиент</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">The most eco-friendly products on the market. It's a pleasure to use a natural product.</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev9.png" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">Synergy Solutions CO</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 6: Corporate (UZ) -->
+                            <div class="swiper-slide">
+                                <div class="review-card corporate-card animate-up">
+                                    <div class="review-badge corporate-badge" data-i18n="label_distributor">Корпоративный клиент</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">Bizning asosiy gigiyena yetkazib beruvchimiz. Eng yuqori sifat standartlari va professional qo'llab-quvvatlash.</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev5.png" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">Eco-Distribution</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 7: Buyer (RU) -->
+                            <div class="swiper-slide">
+                                <div class="review-card buyer-card animate-up">
+                                    <div class="review-badge buyer-badge" data-i18n="label_regular_buyer">Покупатель</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">Салфетки очень прочные и не рвутся. Очень удобно брать с собой в дорогу. Всегда в сумочке!</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev7.jpg" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">Елена Смирнова</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 8: Corporate (EN) -->
+                            <div class="swiper-slide">
+                                <div class="review-card corporate-card animate-up">
+                                    <div class="review-badge corporate-badge" data-i18n="label_distributor">Корпоративный клиент</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">Consistent supply volume and high quality packaging. We've been working without complaints for three years.</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev6.jpg" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">CleanWay Retail</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 9: Buyer (UZ) -->
+                            <div class="swiper-slide">
+                                <div class="review-card buyer-card animate-up">
+                                    <div class="review-badge buyer-badge" data-i18n="label_regular_client">Покупатель</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">Bunday sifat uchun ajoyib narx. HYGIENE salfetkalari endi bizning sevimli mahsulotimiz. Barcha tanishlarimga tavsiya qilaman.</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev10.png" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">Jasur Abdullaev</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review 10: Buyer (RU) -->
+                            <div class="swiper-slide">
+                                <div class="review-card buyer-card animate-up">
+                                    <div class="review-badge buyer-badge" data-i18n="label_regular_client">Клиент</div>
+                                    <div class="review-quote-icon">“</div>
+                                    <p class="review-text">Мы ценим экологичный подход HYGIENE к производству. Это крайне важно для наших европейских партнеров.</p>
+                                    <div class="review-footer">
+                                        <img src="assets/reviews/rev8.jpg" alt="User" class="review-avatar">
+                                        <div class="review-info">
+                                            <h4 class="review-name">Малика Ибрагимова</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <div class="reviews-v2-nav">
+                        <div class="rv2-prev"><i data-lucide="chevron-left"></i></div>
+                        <div class="rv2-pagination"></div>
+                        <div class="rv2-next"><i data-lucide="chevron-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action - Interactive -->
+        <section class="contacts section" style="background: var(--bg-soft);">
+            <div class="container">
+                <div class="section-header text-center animate-up">
+                    <h2 data-i18n="cta_interactive_title">Сильное партнёрство</h2>
+                    <p data-i18n="cta_interactive_desc">Наши преимущества</p>
+                </div>
+
+                <div class="cta-interactive-grid animate-up">
+                    <div class="cta-interactive-item">
+                        <div class="cta-card-inner">
+                            <div class="cta-card-front">
+                                <i data-lucide="truck" class="cta-icon-bg"></i>
+                                <h4 data-i18n="cta_benefit_1">Логистика</h4>
+                            </div>
+                            <div class="cta-card-back">
+                                <h4 data-i18n="cta_benefit_1">Логистика</h4>
+                                <p data-i18n="cta_benefit_desc_1">Компания предоставляет логистические услуги по всему Узбекистану.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-interactive-item">
+                        <div class="cta-card-inner">
+                            <div class="cta-card-front">
+                                <i data-lucide="factory" class="cta-icon-bg"></i>
+                                <h4 data-i18n="cta_benefit_2">Крупное производство</h4>
+                            </div>
+                            <div class="cta-card-back">
+                                <h4 data-i18n="cta_benefit_2">Крупное производство</h4>
+                                <p data-i18n="cta_benefit_desc_2">Стабильное производство — бесперебойные поставки в любых объёмах.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-interactive-item">
+                        <div class="cta-card-inner">
+                            <div class="cta-card-front">
+                                <i data-lucide="handshake" class="cta-icon-bg"></i>
+                                <h4 data-i18n="cta_benefit_3">Гибкие условия</h4>
+                            </div>
+                            <div class="cta-card-back">
+                                <h4 data-i18n="cta_benefit_3">Гибкие условия</h4>
+                                <p data-i18n="cta_benefit_desc_3">Индивидуальный подход к каждому партнёру — работаем под ваши задачи.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-interactive-item">
+                        <div class="cta-card-inner">
+                            <div class="cta-card-front">
+                                <i data-lucide="trending-up" class="cta-icon-bg"></i>
+                                <h4 data-i18n="cta_benefit_4">Сервис и поддержка</h4>
+                            </div>
+                            <div class="cta-card-back">
+                                <h4 data-i18n="cta_benefit_4">Сервис и поддержка</h4>
+                                <p data-i18n="cta_benefit_desc_4">Работаем параллельно с вами — обучение торговых агентов, полевая работа и анализ точек роста в дистрибуции.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-card text-center animate-up">
+                    <h2 data-i18n="contact_title">Станьте нашим партнёром</h2>
+                    <p data-i18n="contact_desc">Оставьте заявку, и наш менеджер свяжется с вами для обсуждения
+                        партнерства.</p>
+                    <a href="contacts.html" class="btn btn-premium-animated" data-i18n="nav_contacts">Связаться с
+                        нами</a>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>
