@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYGIENE — Наша Продукция</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="components.js?v=2"></script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <app-header></app-header>
+
+
+
+    <!-- Brand Showcase Banners (Vertical Banners Grid) -->
+    <section class="brand-showcase-section" id="brand-showcase">
+        <div class="brand-showcase-container">
+            <h2 class="showcase-title" data-i18n="showcase_title">Выберите бренд для просмотра каталога</h2>
+            <div class="brand-banners-grid">
+                <!-- Banner 1: ECO -->
+                <div class="brand-banner-card card-eco" data-brand="eco">
+                    <div class="banner-card-bg" style="background-image: url('banners/banner1.jpg');"></div>
+                    <div class="banner-bg-overlay"></div>
+                    <div class="banner-content">
+                        <div class="banner-header">
+                            <div class="banner-logo-wrap">
+                                <img src="assets/logo-eco.webp" alt="ECO" class="banner-logo-img">
+                            </div>
+                        </div>
+                        <div class="banner-footer">
+                            <h3 class="banner-brand-title">ECO</h3>
+                            <p class="banner-brand-desc" data-i18n="eco_desc_short">ECO — линейка влажных салфеток для ежедневного ухода. Для заботы о себе и близких каждый день.</p>
+                            <div class="banner-action-circle">
+                                <i data-lucide="arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banner 2: Bloomy -->
+                <div class="brand-banner-card card-bloomy" data-brand="bloomy">
+                    <div class="banner-card-bg" style="background-image: url('banners/banner2.png');"></div>
+                    <div class="banner-bg-overlay"></div>
+                    <div class="banner-content">
+                        <div class="banner-header">
+                            <div class="banner-logo-wrap">
+                                <img src="assets/logo-bloomy.webp" alt="Bloomy" class="banner-logo-img">
+                            </div>
+                        </div>
+                        <div class="banner-footer">
+                            <h3 class="banner-brand-title">Bloomy</h3>
+                            <p class="banner-brand-desc" data-i18n="bloomy_desc_short">Bloomy — влажные салфетки для повседневного использования. Лёгкие цветочные ароматы и бережный уход за чувствительной кожей.</p>
+                            <div class="banner-action-circle">
+                                <i data-lucide="arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banner 3: AYVA -->
+                <div class="brand-banner-card card-ayva" data-brand="ayva">
+                    <div class="banner-card-bg" style="background-image: url('banners/banner3.png');"></div>
+                    <div class="banner-bg-overlay"></div>
+                    <div class="banner-content">
+                        <div class="banner-header">
+                            <div class="banner-logo-wrap">
+                                <img src="assets/logo-ayva.png" alt="AYVA" class="banner-logo-img">
+                            </div>
+                        </div>
+                        <div class="banner-footer">
+                            <h3 class="banner-brand-title">AYVA</h3>
+                            <p class="banner-brand-desc" data-i18n="ayva_desc_short">Ayva — влажные салфетки, которые всегда с вами. Для ежедневной гигиены и ухода за нежной кожей.</p>
+                            <div class="banner-action-circle">
+                                <i data-lucide="arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compact Brand Switcher (Assembled State) -->
+    <section class="compact-brand-bar" id="compact-brand-bar" style="display: none; opacity: 0; transform: translateY(-20px);">
+        <div class="compact-brand-container">
+            <button class="compact-brand-btn" data-filter="eco">
+                <img src="assets/logo-eco.webp" alt="ECO" class="compact-logo-img">
+            </button>
+            <button class="compact-brand-btn" data-filter="bloomy">
+                <img src="assets/logo-bloomy.webp" alt="Bloomy" class="compact-logo-img">
+            </button>
+            <button class="compact-brand-btn" data-filter="ayva">
+                <img src="assets/logo-ayva.png" alt="AYVA" class="compact-logo-img">
+            </button>
+        </div>
+    </section>
+
+
+    <main class="fullpage-catalog-viewport" style="display: none; opacity: 0; min-height: 80vh; padding: 40px 20px;">
+        <!-- Coming Soon Overlay -->
+        <div id="coming-soon" class="coming-soon-overlay" style="opacity: 0; pointer-events: none;">
+            <div class="cs-content">
+                <span class="cs-icon">✨</span>
+                <h2 class="cs-title" data-i18n="cs_title">Скоро в продаже</h2>
+                <p class="cs-text" data-i18n="cs_text">Данный раздел находится в разработке. Товары будут добавлены в ближайшее время.</p>
+                <button class="cs-back-btn" data-i18n="cs_back_btn">Вернуться к салфеткам</button>
+            </div>
+        </div>
+
+        <!-- Main Catalog Container -->
+        <div class="catalog-main-content" id="catalog-main-content">
+            <!-- Tabs for Packs -->
+            <div class="catalog-pack-tabs" id="catalog-pack-tabs">
+                <!-- Populated via JS -->
+            </div>
+
+            <!-- Full-width Staggered Grid for Products -->
+            <div class="catalog-full-grid" id="catalog-full-grid">
+                <!-- Populated via JS -->
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- Detailed Product Modal -->
+    <div class="product-modal-overlay" id="product-modal" style="display: none; opacity: 0; pointer-events: none;">
+        <div class="product-modal-content">
+            <button class="modal-close-btn" id="btn-close-modal"><i data-lucide="x"></i></button>
+            <div class="modal-left">
+                <img src="" id="modal-img" alt="Product">
+            </div>
+            <div class="modal-right">
+                <h2 id="modal-title">Product Title</h2>
+                <div class="modal-tags" id="modal-tags"></div>
+                <p class="modal-desc" id="modal-desc">Краткое описание товара.</p>
+                
+                <p class="ca-spec" id="modal-spec-pack" style="font-weight: 600; color: var(--primary); margin-top: -10px; margin-bottom: 20px;">Pack Info</p>
+                
+                <div class="modal-specs-wrap">
+                    <h4 data-i18n="modal_specs_title">Характеристики:</h4>
+                    <ul class="modal-specs" id="modal-specs-list">
+                        <!-- Populated via JS -->
+                    </ul>
+                </div>
+                
+                <button class="btn btn-primary" data-i18n="btn_request_price" style="margin-top: 30px; width: 100%;">Запросить прайс</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mystery Brand Intrigue Overlay -->
+    <div class="mystery-intrigue-overlay" id="mystery-intrigue-modal" style="display: none; opacity: 0; pointer-events: none;">
+        <div class="mystery-modal-box">
+            <button class="mystery-close-btn" id="btn-close-mystery"><i data-lucide="x"></i></button>
+            <div class="mystery-modal-bg-glow"></div>
+            
+            <div class="mystery-modal-content-wrap">
+                <!-- Status Badge -->
+                <div class="mystery-badge" data-i18n="mystery_classified">СЕКРЕТНЫЙ ПРОЕКТ • В РАЗРАБОТКЕ</div>
+                
+                <!-- Locking Visuals -->
+                <div class="mystery-lock-container">
+                    <div class="mystery-laser-ring"></div>
+                    <div class="mystery-lock-icon-wrap" id="mystery-lock-icon-wrap">
+                        <i data-lucide="lock" class="lock-icon-svg" id="mystery-lock-icon-svg"></i>
+                    </div>
+                </div>
+                
+                <!-- Text Detail -->
+                <h2 class="mystery-main-title">HYGIENE <span class="neon-green-gradient-text">BLACK LABEL</span></h2>
+                <p class="mystery-main-desc" data-i18n="mystery_intro">Совершенно новый уровень комфорта и заботы. Запуск запланирован на осень 2026 года. Мы создаем этот продукт для тех, кто не соглашается на компромиссы.</p>
+                
+                <!-- Premium Specs List -->
+                <ul class="mystery-specs-list">
+                    <li><i data-lucide="sparkles"></i> <span data-i18n="mystery_f1">Лимитированная серия Premium Plus</span></li>
+                    <li><i data-lucide="feather"></i> <span data-i18n="mystery_f2">Натуральные волокна шёлка и микрофибра</span></li>
+                    <li><i data-lucide="droplet"></i> <span data-i18n="mystery_f3">Инновационный мицеллярный состав лосьона</span></li>
+                    <li><i data-lucide="crown"></i> <span data-i18n="mystery_f4">Фирменный аромат Black Amber & Tobacco Leaf</span></li>
+                </ul>
+                
+                <!-- Newsletter Notification Form -->
+                <form class="mystery-notify-form" id="mystery-subscribe-form">
+                    <div class="mystery-input-wrap">
+                        <input type="text" id="mystery-contact-input" required data-i18n-placeholder="mystery_placeholder_email" placeholder="Введите ваш Email или Телефон">
+                    </div>
+                    <button type="submit" class="btn-mystery-submit">
+                        <span data-i18n="mystery_notify_btn">УВЕДОМИТЬ МЕНЯ</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+                
+                <!-- Success Message (Initially Hidden) -->
+                <div class="mystery-success-box" id="mystery-success-box" style="display: none; opacity: 0;">
+                    <i data-lucide="check-circle" class="success-icon-check"></i>
+                    <h3 class="success-title" data-i18n="mystery_success_title">ДОСТУП РАЗРЕШЕН</h3>
+                    <p class="success-desc" data-i18n="mystery_success_desc">Вы успешно добавлены в закрытый список ожидания HYGIENE BLACK. Мы отправим вам секретное уведомление и ссылку на предзаказ за месяц до старта.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section" style="padding: 100px 0; background: transparent;">
+        <div class="container">
+            <div style="margin-bottom: 60px; text-align: center;">
+                <h2 class="animate-up" data-i18n="about_cert_title"
+                    style="font-size: clamp(2.4rem, 5.5vw, 3.8rem); font-family: 'Outfit', sans-serif; margin-bottom: 20px;">Наши
+                    сертификаты</h2>
+                <p class="animate-up" data-i18n="about_cert_desc"
+                    style="color: var(--text-gray); max-width: 750px; margin: 0 auto; font-size: 18px; line-height: 1.6;">Соответствие продукции международным и государственным стандартам подтверждено независимыми сертификационными органами</p>
+            </div>
+
+            <div class="certificates-grid animate-up">
+                <!-- Card 1: Certificate of conformity -->
+                <div class="cert-card clickable-cert">
+                    <div class="cert-card-body">
+                        <h3 class="new-cert-title" data-i18n="cert_conformity_title">Сертификат соответствия</h3>
+                        <div class="cert-img-wrap">
+                            <img src="assets/certificates/uzstandart.sert.png" alt="Сертификат соответствия">
+                            <div class="cert-overlay">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Sanitary-epidemiological conclusion -->
+                <div class="cert-card clickable-cert">
+                    <div class="cert-card-body">
+                        <h3 class="new-cert-title" data-i18n="cert_sanpin_title">Сан-эпид. заключение</h3>
+                        <div class="cert-img-wrap">
+                            <img src="assets/certificates/sanpin.sert2.png" alt="Сан-эпид. заключение">
+                            <div class="cert-overlay">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: ISO certification (In progress) -->
+                <div class="cert-card iso-card-progress">
+                    <div class="cert-card-body gold-body">
+                        <h3 class="new-cert-title gold-text" data-i18n="cert_iso_title">ISO сертификация</h3>
+                        <div class="iso-status-badge">
+                            <span class="emoji">⏳</span>
+                            <span data-i18n="cert_in_progress">В процессе получения</span>
+                        </div>
+                        <div class="iso-circle-wrap">
+                            <svg class="iso-progress-svg" viewBox="0 0 160 160">
+                                <circle class="iso-progress-track" cx="80" cy="80" r="72"></circle>
+                                <circle class="iso-progress-bar" cx="80" cy="80" r="72"></circle>
+                            </svg>
+                            <span class="iso-circle-text">ISO</span>
+                        </div>
+                        <div class="iso-info-block">
+                            <h4 class="iso-info-title" data-i18n="cert_iso_subtitle1">Международный стандарт</h4>
+                            <p class="iso-info-subtitle" data-i18n="cert_iso_subtitle2">системы менеджмента качества</p>
+                            <p class="iso-info-text" data-i18n="cert_iso_desc">Подтверждает соответствие международным требованиям к производству продукции</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- bottom footer box -->
+            <div class="cert-footer-box animate-up">
+                <p class="cert-footer-text" data-i18n="cert_footer_text">Все сертификаты действительны до 2028 года. Продукция соответствует санитарным нормам и требованиям Республики Узбекистан.</p>
+            </div>
+        </div>
+
+        <style>
+            .certificates-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                margin-top: 50px;
+            }
+
+            .cert-card {
+                background: #ffffff;
+                border-radius: 28px;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid rgba(44, 102, 77, 0.12);
+                overflow: hidden;
+                box-shadow: 0 10px 40px rgba(44, 102, 77, 0.03);
+                transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            .cert-card.clickable-cert {
+                cursor: pointer;
+            }
+
+            .cert-card.clickable-cert:hover {
+                transform: translateY(-12px);
+                box-shadow: 0 30px 60px rgba(36, 139, 101, 0.12);
+                border-color: #2c664d;
+            }
+
+            .cert-card.iso-card-progress {
+                border: 1px solid rgba(196, 161, 84, 0.22);
+                box-shadow: 0 10px 40px rgba(196, 161, 84, 0.03);
+            }
+
+            .cert-card.iso-card-progress:hover {
+                transform: translateY(-12px);
+                box-shadow: 0 30px 60px rgba(196, 161, 84, 0.12);
+                border-color: #c4a154;
+            }
+
+            .new-cert-title {
+                font-size: 20px;
+                font-family: 'Outfit', sans-serif;
+                font-weight: 700;
+                color: #2c664d;
+                margin-bottom: 22px;
+                text-align: center;
+                letter-spacing: 0.2px;
+            }
+
+            .new-cert-title.gold-text {
+                color: #c4a154;
+            }
+
+            .cert-card-body {
+                padding: 30px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #ffffff;
+            }
+
+            .cert-card-body.gold-body {
+                background-color: #fdfbf8;
+            }
+
+            .cert-img-wrap {
+                position: relative;
+                width: 100%;
+                border-radius: 16px;
+                overflow: hidden;
+                aspect-ratio: 1 / 1.41;
+                background: #ffffff;
+                border: 1px solid rgba(0, 0, 0, 0.04);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+            }
+
+            .cert-img-wrap img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                padding: 8px;
+                transition: transform 0.6s ease;
+            }
+
+            .cert-card:hover .cert-img-wrap img {
+                transform: scale(1.04);
+            }
+
+            .cert-overlay {
+                position: absolute;
+                inset: 0;
+                background: rgba(36, 139, 101, 0.15);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: all 0.3s ease;
+                color: #2c664d;
+                backdrop-filter: blur(2px);
+            }
+
+            .cert-card:hover .cert-overlay {
+                opacity: 1;
+            }
+
+            .iso-status-badge {
+                background: #c4a154;
+                color: #ffffff;
+                padding: 8px 16px;
+                border-radius: 30px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                font-weight: 700;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+                margin-bottom: 25px;
+                box-shadow: 0 4px 12px rgba(196, 161, 84, 0.2);
+            }
+
+            .iso-status-badge span.emoji {
+                display: inline-block;
+                animation: hourglassSpin 2.5s ease-in-out infinite;
+            }
+
+            .iso-circle-wrap {
+                position: relative;
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 25px;
+                background: radial-gradient(circle, rgba(196, 161, 84, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+            }
+
+            .iso-progress-svg {
+                position: absolute;
+                inset: -6px;
+                width: 172px;
+                height: 172px;
+                animation: youtubeRotate 1.4s linear infinite;
+                transform-origin: center center;
+                z-index: 1;
+            }
+
+            .iso-progress-track {
+                fill: none;
+                stroke: rgba(196, 161, 84, 0.10);
+                stroke-width: 4px;
+            }
+
+            .iso-progress-bar {
+                fill: none;
+                stroke: #c4a154;
+                stroke-width: 4px;
+                stroke-linecap: round;
+                stroke-dasharray: 452.4;
+                stroke-dashoffset: 452.4;
+                animation: youtubeDash 1.4s ease-in-out infinite;
+            }
+
+            .iso-circle-text {
+                font-family: 'Outfit', sans-serif;
+                font-size: 38px;
+                font-weight: 700;
+                color: #c4a154;
+                letter-spacing: 1px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .iso-info-block {
+                text-align: center;
+            }
+
+            .iso-info-title {
+                font-size: 16px;
+                font-weight: 700;
+                color: #2c664d;
+                margin-bottom: 4px;
+            }
+
+            .iso-info-subtitle {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 12px;
+            }
+
+            .iso-info-text {
+                font-size: 12px;
+                color: #888;
+                line-height: 1.5;
+                max-width: 240px;
+                margin: 0 auto;
+            }
+
+            .cert-footer-box {
+                margin-top: 50px;
+                background-color: #f1f7f5;
+                border: 1px solid rgba(44, 102, 77, 0.2);
+                border-radius: 16px;
+                padding: 18px 25px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .cert-footer-text {
+                margin: 0;
+                font-size: 14px;
+                color: #2c664d;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+
+            /* Lightbox Styles */
+            .cert-modal {
+                display: none;
+                position: fixed;
+                z-index: 11000;
+                padding: 40px 20px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(10, 25, 20, 0.95);
+                backdrop-filter: blur(15px);
+                opacity: 0;
+                transition: opacity 0.4s ease;
+            }
+
+            .cert-modal.active {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                opacity: 1;
+                padding: 100px 20px 60px;
+            }
+
+            .cert-modal .modal-content {
+                margin: auto;
+                display: block;
+                width: auto;
+                max-width: 95%;
+                max-height: 75vh;
+                object-fit: contain;
+                border-radius: 12px;
+                box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+                transform: scale(0.95);
+                transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            .cert-modal.active .modal-content {
+                transform: scale(1);
+            }
+
+            .cert-modal #caption-cert {
+                margin: 20px auto;
+                text-align: center;
+                color: white;
+                font-family: 'Outfit', sans-serif;
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            .cert-modal .close-modal {
+                position: absolute;
+                top: 30px;
+                right: 40px;
+                color: #fff;
+                font-size: 50px;
+                font-weight: 200;
+                transition: 0.3s;
+                cursor: pointer;
+                line-height: 1;
+                z-index: 10001;
+            }
+
+            .cert-modal .close-modal:hover {
+                color: var(--primary);
+                transform: rotate(90deg);
+            }
+
+            .cert-modal .modal-image-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                cursor: zoom-in;
+            }
+
+            .cert-modal .modal-image-container.zoomed {
+                cursor: grab;
+            }
+
+            .cert-modal .modal-image-container.zoomed:active {
+                cursor: grabbing;
+            }
+
+            @keyframes hourglassSpin {
+                0% { transform: rotate(0deg); }
+                40% { transform: rotate(0deg); }
+                60% { transform: rotate(180deg); }
+                100% { transform: rotate(180deg); }
+            }
+
+            @keyframes youtubeRotate {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes youtubeDash {
+                0% {
+                    stroke-dashoffset: 452.4;
+                }
+                50% {
+                    stroke-dashoffset: 135.7;
+                }
+                100% {
+                    stroke-dashoffset: 452.4;
+                }
+            }
+
+            @media (max-width: 992px) {
+                .certificates-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .certificates-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+
+                .new-cert-title {
+                    font-size: 18px;
+                    margin-bottom: 18px;
+                }
+
+                .cert-modal .close-modal {
+                    top: 20px;
+                    right: 20px;
+                    font-size: 40px;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- Lightbox Modal for Certificates -->
+    <div id="cert-modal" class="cert-modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-image-container" id="modal-container-cert">
+            <img class="modal-content" id="cert-modal-img">
+        </div>
+        <div id="caption-cert"></div>
+    </div>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById("cert-modal");
+            const modalImg = document.getElementById("cert-modal-img");
+            const modalContainer = document.getElementById("modal-container-cert");
+            const captionText = document.getElementById("caption-cert");
+            const closeModal = modal ? modal.querySelector(".close-modal") : null;
+
+            if (!modal || !modalImg || !modalContainer) return;
+
+            let isZoomed = false;
+            let startX, startY, scrollLeft, scrollTop;
+
+            document.querySelectorAll('.cert-card.clickable-cert').forEach(card => {
+                card.addEventListener('click', function () {
+                    modal.style.display = "flex";
+                    setTimeout(() => modal.classList.add('active'), 10);
+                    modalImg.src = this.querySelector('img').src;
+                    captionText.innerHTML = this.querySelector('.cert-card-header').innerHTML;
+                    document.body.style.overflow = 'hidden';
+                    resetZoom();
+                });
+            });
+
+            function resetZoom() {
+                isZoomed = false;
+                modalImg.style.transform = "scale(1)";
+                modalImg.style.transformOrigin = "center center";
+                modalContainer.classList.remove('zoomed');
+                modalContainer.scrollLeft = 0;
+                modalContainer.scrollTop = 0;
+            }
+
+            modalContainer.addEventListener('dblclick', function (e) {
+                if (e.target !== modalImg) return;
+
+                isZoomed = !isZoomed;
+
+                if (isZoomed) {
+                    const rect = modalImg.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                    modalImg.style.transformOrigin = `${x}% ${y}%`;
+                    modalImg.style.transform = "scale(2.5)";
+                    modalContainer.classList.add('zoomed');
+                } else {
+                    resetZoom();
+                }
+            });
+
+            let isDragging = false;
+            let currentX = 0, currentY = 0;
+            let dragStartX = 0, dragStartY = 0;
+
+            modalContainer.addEventListener('mousedown', (e) => {
+                if (!isZoomed) return;
+                isDragging = true;
+                dragStartX = e.clientX - currentX;
+                dragStartY = e.clientY - currentY;
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging || !isZoomed) return;
+                currentX = e.clientX - dragStartX;
+                currentY = e.clientY - dragStartY;
+                modalImg.style.transform = `scale(2.5) translate(${currentX / 2.5}px, ${currentY / 2.5}px)`;
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            function closeCertModal() {
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.style.display = "none";
+                    document.body.style.overflow = '';
+                    resetZoom();
+                    currentX = 0; currentY = 0;
+                }, 400);
+            }
+
+            if (closeModal) closeModal.addEventListener('click', closeCertModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeCertModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === "Escape" && modal.classList.contains('active')) closeCertModal();
+            });
+        });
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="translations.js?v=2"></script>
+    <script src="main.js?v=2"></script>
+</body>
+
+</html>
