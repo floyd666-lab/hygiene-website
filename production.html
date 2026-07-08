@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Производство — HYGIENE</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="components.js?v=2"></script>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <app-header></app-header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="hero-bg-elements">
+                <div class="particle p1"></div>
+                <div class="particle p2"></div>
+            </div>
+            <div class="container animate-up">
+                <h1 data-i18n="production_hero_title">Производство HYGIENE</h1>
+            </div>
+        </section>
+
+        <!-- Production Overview Section -->
+        <section class="production-overview-section">
+            <div class="container">
+                <div class="overview-grid">
+                    <!-- Left Text Column -->
+                    <div class="overview-text animate-up" style="display: flex; flex-direction: column; gap: 24px;">
+                        <p class="overview-lead" data-i18n="production_desc_p1" style="font-size: 1.25rem; line-height: 1.7; color: var(--text-dark); font-weight: 500;">
+                            Влажные салфетки — продукт ежедневного использования. За каждой упаковкой стоит многоэтапный производственный процесс. Компания HYGIENE выстроила полный цикл — от подготовки сырья и приготовления лосьона до пропитки, нарезки и упаковки готовой продукции.
+                        </p>
+                        <div style="width: 60px; height: 3px; background: var(--primary); border-radius: 2px; margin: 10px 0;"></div>
+                        <p data-i18n="production_desc_p2" style="font-size: 1.05rem; line-height: 1.65; color: var(--text-gray);">
+                            Производство располагает четырьмя линиями, каждая из которых специализируется на выпуске определённого формата — от компактных упаковок по 10 штук до стандартных по 120 штук. На линиях работают 60 сотрудников в две смены. Ежемесячная производственная мощность составляет 3 000 000 единиц, фактический выпуск — 2 000 000 единиц в месяц.
+                        </p>
+                        <p data-i18n="production_desc_p3" style="font-size: 1.05rem; line-height: 1.65; color: var(--text-gray);">
+                            Стандарты чистоты соблюдаются на каждом этапе — от производственных помещений до готовой упаковки. Особое внимание уделяется качеству воды. Компания использует собственную артезианскую скважину: вода проходит очистку методом обратного осмоса до 99% чистоты и только после этого поступает в производство. Ежедневное потребление воды превышает 20 тонн. Для пропитки используются отдушки и химикаты производства Швейцарии, Испании, Германии, Турции и Китая.
+                        </p>
+                        <p data-i18n="production_desc_p4" style="font-size: 1.05rem; line-height: 1.65; color: var(--text-gray);">
+                            Контроль качества осуществляется непосредственно на производстве — каждая партия проходит проверку по показателям влажности, температуры и pH. Готовая продукция хранится на собственном складе площадью 1000 м², сырьё — на отдельном складе аналогичной площади.
+                        </p>
+                        <p data-i18n="production_desc_p5" style="font-size: 1.05rem; line-height: 1.65; color: var(--text-gray);">
+                            За производством стоит слаженная команда — опытные технологи, операторы линий, специалисты отдела контроля качества и руководители производства. Именно люди обеспечивают стабильность и качество на каждом этапе. В планах компании — запуск пятой производственной линии для дальнейшего расширения выпуска.
+                        </p>
+                        <p class="overview-highlight" data-i18n="production_desc_p6" style="font-size: 1.15rem; line-height: 1.6; color: var(--primary); font-weight: 600; border-left: 3px solid var(--primary); padding-left: 20px; margin-top: 10px;">
+                            Каждый день производственные линии выпускают тысячи упаковок — и каждая из них улучшает жизнь миллионов людей по всей стране.
+                        </p>
+                    </div>
+
+                    <!-- Right Stats Bento-like Column -->
+                    <div class="overview-stats animate-up" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="stat-card">
+                            <div style="font-size: 3rem; font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif; line-height: 1.1; margin-bottom: 8px;">4</div>
+                            <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px;" data-i18n="stat_lines_title">Линии производства</div>
+                            <div style="font-size: 0.85rem; color: var(--text-gray); line-height: 1.4;" data-i18n="stat_lines_desc">Специализируются на форматах от 10 до 120 штук</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div style="font-size: 3rem; font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif; line-height: 1.1; margin-bottom: 8px;">60</div>
+                            <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px;" data-i18n="stat_staff_title">Сотрудников</div>
+                            <div style="font-size: 0.85rem; color: var(--text-gray); line-height: 1.4;" data-i18n="stat_staff_desc">Профессионалы работают посменно в 2 смены</div>
+                        </div>
+
+                        <div class="stat-card" style="grid-column: span 2;">
+                            <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif; line-height: 1.1; margin-bottom: 8px;">3 000 000</div>
+                            <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px;" data-i18n="stat_capacity_title">Мощность единиц / мес</div>
+                            <div style="font-size: 0.85rem; color: var(--text-gray); line-height: 1.4;" data-i18n="stat_capacity_desc">Фактический выпуск составляет 2 000 000 упаковок в месяц</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div style="font-size: 3rem; font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif; line-height: 1.1; margin-bottom: 8px;">99%</div>
+                            <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px;" data-i18n="stat_water_title">Чистота воды</div>
+                            <div style="font-size: 0.85rem; color: var(--text-gray); line-height: 1.4;" data-i18n="stat_water_desc">Скважина и очистка методом обратного осмоса</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div style="font-size: 3rem; font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif; line-height: 1.1; margin-bottom: 8px;">20т+</div>
+                            <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px;" data-i18n="stat_water_daily_title">Воды в сутки</div>
+                            <div style="font-size: 0.85rem; color: var(--text-gray); line-height: 1.4;" data-i18n="stat_water_daily_desc">Потребление для бесперебойного производства</div>
+                        </div>
+
+                        <div class="stat-card" style="grid-column: span 2;">
+                            <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif; line-height: 1.1; margin-bottom: 8px;">1000 м² + 1000 м²</div>
+                            <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px;" data-i18n="stat_wh_title">Склады сырья и продукции</div>
+                            <div style="font-size: 0.85rem; color: var(--text-gray); line-height: 1.4;" data-i18n="stat_wh_desc">Раздельное хранение готового товара и качественных ингредиентов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mesmerizing Bento Video Gallery (Apple Style) -->
+        <section class="section" style="padding: 40px 0 100px; background: transparent; overflow: hidden;">
+            <div class="container">
+                <div class="section-header" style="margin-bottom: 60px; text-align: center;">
+                    <span class="section-tag section-tag-large" data-i18n="tag_gallery">Как создаётся каждая упаковка</span>
+                    <h2 class="section-title" data-i18n="gallery_title">Процесс производства влажных салфеток изнутри</h2>
+                </div>
+
+                <div class="honeycomb-grid-container animate-up">
+                    <!-- Row 1 (3 Hexagons) -->
+                    <div class="honeycomb-row">
+                        <!-- Hexagon 1 -->
+                        <div class="hexagon-wrapper" data-index="0">
+                            <div class="hexagon-inner">
+                                <div class="hexagon-bg" style="background-image: url('assets/production/hex_1.jpg');"></div>
+                                <div class="hexagon-overlay">
+                                    <span class="hexagon-num">01</span>
+                                    <h4 data-i18n="vid_label_1">Подготовка сырья</h4>
+                                    <div class="play-btn">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hexagon 2 -->
+                        <div class="hexagon-wrapper" data-index="1">
+                            <div class="hexagon-inner">
+                                <div class="hexagon-bg" style="background-image: url('assets/production/hex_3.jpg');"></div>
+                                <div class="hexagon-overlay">
+                                    <span class="hexagon-num">02</span>
+                                    <h4 data-i18n="vid_label_3">Приготовление лосьона</h4>
+                                    <div class="play-btn">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hexagon 3 -->
+                        <div class="hexagon-wrapper" data-index="2">
+                            <div class="hexagon-inner">
+                                <div class="hexagon-bg" style="background-image: url('assets/production/hex_5.jpg');"></div>
+                                <div class="hexagon-overlay">
+                                    <span class="hexagon-num">03</span>
+                                    <h4 data-i18n="vid_label_5">Процесс пропитки</h4>
+                                    <div class="play-btn">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 (2 Hexagons) -->
+                    <div class="honeycomb-row">
+                        <!-- Hexagon 4 -->
+                        <div class="hexagon-wrapper" data-index="3">
+                            <div class="hexagon-inner">
+                                <div class="hexagon-bg" style="background-image: url('assets/production/hex_4.jpg');"></div>
+                                <div class="hexagon-overlay">
+                                    <span class="hexagon-num">04</span>
+                                    <h4 data-i18n="vid_label_4">Работа оборудования</h4>
+                                    <div class="play-btn">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hexagon 5 -->
+                        <div class="hexagon-wrapper" data-index="4">
+                            <div class="hexagon-inner">
+                                <div class="hexagon-bg" style="background-image: url('assets/production/hex_7.jpg');"></div>
+                                <div class="hexagon-overlay">
+                                    <span class="hexagon-num">05</span>
+                                    <h4 data-i18n="vid_label_7">Контроль качества</h4>
+                                    <div class="play-btn">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 (1 Hexagon) -->
+                    <div class="honeycomb-row">
+                        <!-- Hexagon 6 -->
+                        <div class="hexagon-wrapper" data-index="5">
+                            <div class="hexagon-inner">
+                                <div class="hexagon-bg" style="background-image: url('assets/production/hex_8.jpg');"></div>
+                                <div class="hexagon-overlay">
+                                    <span class="hexagon-num">06</span>
+                                    <h4 data-i18n="vid_label_8">Логистика и склад</h4>
+                                    <div class="play-btn">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                body {
+                    background: linear-gradient(135deg, #f2fbf7 0%, #f3f8ff 50%, #fef5fc 100%) !important;
+                }
+                .honeycomb-grid-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0;
+                    max-width: 1200px;
+                    margin: 40px auto 0;
+                    position: relative;
+                }
+                .honeycomb-row {
+                    display: flex;
+                    justify-content: center;
+                    gap: 24px;
+                    width: 100%;
+                }
+                .honeycomb-row:nth-child(2) {
+                    margin-top: -65px;
+                    position: relative;
+                    z-index: 2;
+                }
+                .honeycomb-row:nth-child(3) {
+                    margin-top: -65px;
+                    position: relative;
+                    z-index: 1;
+                }
+                .hexagon-wrapper {
+                    position: relative;
+                    width: 250px;
+                    height: 288px;
+                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                    background: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+                    cursor: pointer;
+                }
+                .hexagon-wrapper::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%);
+                    z-index: 1;
+                    pointer-events: none;
+                    transition: opacity 0.5s ease;
+                }
+                .hexagon-inner {
+                    position: absolute;
+                    inset: 2px;
+                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                    background: #0c0c0c;
+                    overflow: hidden;
+                    z-index: 2;
+                }
+                .hexagon-bg {
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    background-position: center;
+                    filter: brightness(0.65) contrast(1.05);
+                    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+                }
+                .hexagon-overlay {
+                    position: absolute;
+                    inset: 0;
+                    padding: 30px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.85) 100%);
+                    text-align: center;
+                    color: #fff;
+                    z-index: 3;
+                }
+                .hexagon-num {
+                    font-family: 'Outfit', sans-serif;
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: var(--primary);
+                    letter-spacing: 2px;
+                    margin-bottom: 12px;
+                    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+                    transition: all 0.4s ease;
+                }
+                .hexagon-overlay h4 {
+                    font-family: 'Outfit', sans-serif;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin: 0 0 15px;
+                    line-height: 1.35;
+                    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+                    transition: all 0.4s ease;
+                }
+                .play-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    color: #fff;
+                    opacity: 0;
+                    transform: translateY(10px);
+                    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                }
+                .play-btn svg {
+                    margin-left: 2px;
+                    fill: currentColor;
+                }
+
+                /* Hover Effects */
+                .hexagon-wrapper:hover {
+                    transform: scale(1.06) rotate(1deg);
+                    z-index: 10;
+                    filter: drop-shadow(0 15px 35px rgba(36, 139, 101, 0.3));
+                }
+                .hexagon-wrapper:hover .hexagon-bg {
+                    transform: scale(1.1) rotate(-1deg);
+                    filter: brightness(0.55) contrast(1.1);
+                }
+                .hexagon-wrapper:hover .play-btn {
+                    opacity: 1;
+                    transform: translateY(0);
+                    background: #fff;
+                    color: #000;
+                    border-color: #fff;
+                }
+                .hexagon-wrapper:hover .hexagon-num {
+                    color: #fff;
+                }
+
+                /* Tablet responsive styling */
+                @media (max-width: 992px) {
+                    .hexagon-wrapper {
+                        width: 210px;
+                        height: 242px;
+                    }
+                    .honeycomb-row:nth-child(2) {
+                        margin-top: -55px;
+                    }
+                    .honeycomb-row:nth-child(3) {
+                        margin-top: -55px;
+                    }
+                    .hexagon-overlay h4 {
+                        font-size: 15px;
+                        margin-bottom: 8px;
+                    }
+                    .play-btn {
+                        width: 38px;
+                        height: 38px;
+                    }
+                }
+
+                /* Mobile responsive styling (interlocking wraps) */
+                @media (max-width: 768px) {
+                    .honeycomb-row {
+                        display: contents;
+                    }
+                    .honeycomb-grid-container {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 16px;
+                        padding: 0 12px;
+                        margin-top: 24px;
+                    }
+                    .hexagon-wrapper {
+                        width: 145px;
+                        height: 167px;
+                        margin: 0 !important;
+                    }
+                    .hexagon-overlay {
+                        padding: 15px 10px;
+                    }
+                    .hexagon-num {
+                        font-size: 11px;
+                        margin-bottom: 4px;
+                    }
+                    .hexagon-overlay h4 {
+                        font-size: 13px;
+                        margin-bottom: 0;
+                        line-height: 1.25;
+                    }
+                    .play-btn {
+                        display: none; /* hide play button on mobile to save space */
+                    }
+                }
+
+                /* Video Modal styles (Stories style) */
+                .video-modal {
+                    position: fixed;
+                    inset: 0;
+                    z-index: 10000;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                }
+                .video-modal-backdrop {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.85);
+                    backdrop-filter: blur(15px);
+                    -webkit-backdrop-filter: blur(15px);
+                }
+                .video-modal-container {
+                    position: relative;
+                    width: auto;
+                    max-width: 90%;
+                    aspect-ratio: 9/16;
+                    height: 90vh;
+                    max-height: 880px;
+                    z-index: 2;
+                    transform: scale(0.9) translateY(30px);
+                    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+                }
+                .video-modal-content {
+                    width: 100%;
+                    height: 100%;
+                    background: #000;
+                    border-radius: 24px;
+                    overflow: hidden;
+                    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.6);
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                    position: relative;
+                }
+                .modal-video-player {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
+                /* Progress Bars */
+                .story-progress-container {
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    right: 15px;
+                    display: flex;
+                    gap: 6px;
+                    z-index: 10;
+                }
+                .story-progress-bar {
+                    flex: 1;
+                    height: 3px;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 2px;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .story-progress-bar-fill {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 0%;
+                    background: #fff;
+                }
+                
+                /* Header */
+                .story-header {
+                    position: absolute;
+                    top: 25px;
+                    left: 15px;
+                    right: 60px;
+                    z-index: 10;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    pointer-events: none;
+                }
+                .story-header-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                }
+                .story-step-num {
+                    font-family: 'Outfit', sans-serif;
+                    font-size: 11px;
+                    font-weight: 700;
+                    color: #fff;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+                .story-step-title {
+                    font-family: 'Outfit', sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+                }
+                
+                /* Close Button */
+                .story-close-btn {
+                    position: absolute;
+                    top: 22px;
+                    right: 15px;
+                    background: rgba(0, 0, 0, 0.3);
+                    border: none;
+                    color: rgba(255, 255, 255, 0.85);
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    z-index: 11;
+                    transition: all 0.3s ease;
+                    backdrop-filter: blur(5px);
+                }
+                .story-close-btn:hover {
+                    background: rgba(255, 255, 255, 0.9);
+                    color: #000;
+                    transform: scale(1.05);
+                }
+                
+                /* Tap Zones */
+                .story-tap-zones {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    z-index: 8;
+                }
+                .story-tap-zone-left {
+                    width: 25%;
+                    height: 100%;
+                    cursor: w-resize;
+                }
+                .story-tap-zone-middle {
+                    width: 50%;
+                    height: 100%;
+                    cursor: pointer;
+                }
+                .story-tap-zone-right {
+                    width: 25%;
+                    height: 100%;
+                    cursor: e-resize;
+                }
+
+                /* Play/Pause Central Overlay Indicator */
+                .story-play-indicator {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.9);
+                    width: 70px;
+                    height: 70px;
+                    background: rgba(255, 255, 255, 0.2);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    opacity: 0;
+                    pointer-events: none;
+                    z-index: 9;
+                    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                }
+                .story-play-indicator.is-visible {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+                .story-play-indicator svg {
+                    margin-left: 4px; /* offset play icon slightly for visual centering */
+                }
+                
+                /* Desktop Nav Arrows */
+                .story-nav-arrow {
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.1);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    color: #fff;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    z-index: 5;
+                }
+                .story-nav-arrow:hover {
+                    background: #fff;
+                    color: #000;
+                    transform: scale(1.1);
+                }
+                .prev-story-btn {
+                    left: calc(50% - 340px);
+                }
+                .next-story-btn {
+                    right: calc(50% - 340px);
+                }
+                
+                .video-modal.is-active {
+                    display: flex;
+                    opacity: 1;
+                }
+                .video-modal.is-active .video-modal-container {
+                    transform: scale(1) translateY(0);
+                }
+                
+                /* Mobile optimization */
+                @media (max-width: 768px) {
+                    .story-nav-arrow {
+                        display: none;
+                    }
+                    .video-modal-container {
+                        width: 100%;
+                        height: 100vh;
+                        max-height: 100%;
+                        max-width: 100%;
+                        aspect-ratio: auto;
+                    }
+                    .video-modal-content {
+                        border-radius: 0;
+                        border: none;
+                    }
+                    .story-progress-container {
+                        top: 20px;
+                    }
+                    .story-header {
+                        top: 32px;
+                    }
+                    .story-close-btn {
+                        top: 29px;
+                    }
+                }
+
+                /* Production Overview Section Styles */
+                .page-hero {
+                    padding-bottom: 0 !important;
+                }
+                .production-overview-section {
+                    padding: 20px 0 60px;
+                    background: transparent;
+                    position: relative;
+                }
+                .overview-grid {
+                    display: grid;
+                    grid-template-columns: 1.2fr 0.8fr;
+                    gap: 60px;
+                    align-items: start;
+                }
+                .stat-card {
+                    background: var(--white);
+                    padding: 30px 24px;
+                    border-radius: 24px;
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+                    border: 1px solid rgba(36,139,101,0.08);
+                    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+                }
+                .stat-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 25px 50px rgba(36, 139, 101, 0.08);
+                    border-color: rgba(36,139,101,0.2);
+                }
+                .section-tag-large {
+                    font-size: 16px !important;
+                    letter-spacing: 2px !important;
+                    font-weight: 700 !important;
+                }
+                @media (max-width: 992px) {
+                    .overview-grid {
+                        grid-template-columns: 1fr;
+                        gap: 40px;
+                    }
+                    .overview-stats {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+                @media (max-width: 576px) {
+                    .overview-stats {
+                        grid-template-columns: 1fr !important;
+                    }
+                    .stat-card {
+                        grid-column: span 1 !important;
+                    }
+                }
+            </style>
+        </section>
+
+
+
+        <!-- Video Player Modal -->
+        <div id="video-modal" class="video-modal">
+            <div class="video-modal-backdrop"></div>
+            
+            <!-- Left & Right Arrow Navigation for Desktop -->
+            <button class="story-nav-arrow prev-story-btn" aria-label="Previous step">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+            
+            <div class="video-modal-container">
+                <div class="video-modal-content">
+                    <!-- Progress Bars -->
+                    <div class="story-progress-container" id="story-progress-container">
+                        <!-- Progress bars will be injected dynamically by JS -->
+                    </div>
+                    
+                    <!-- Header Info -->
+                    <div class="story-header">
+                        <div class="story-header-info">
+                            <span class="story-step-num" id="story-step-num">01/07</span>
+                            <span class="story-step-title" id="story-step-title">Подготовка сырья</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Close button inside the card -->
+                    <button id="video-modal-close" class="story-close-btn" aria-label="Close video">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                    
+                    <!-- Tap Navigation Zones -->
+                    <div class="story-tap-zones">
+                        <div class="story-tap-zone-left" id="story-tap-left" title="Предыдущее видео"></div>
+                        <div class="story-tap-zone-middle" id="story-tap-middle" title="Пауза / Воспроизведение"></div>
+                        <div class="story-tap-zone-right" id="story-tap-right" title="Следующее видео"></div>
+                    </div>
+                    
+                    <!-- Play/Pause Central Overlay Indicator -->
+                    <div class="story-play-indicator" id="story-play-indicator">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    
+                    <!-- Video Player (Muted) -->
+                    <video id="modal-video-player" class="modal-video-player" playsinline muted>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- Audio Player for custom soundtracks -->
+                    <audio id="modal-audio-player" style="display: none;"></audio>
+                </div>
+            </div>
+            
+            <button class="story-nav-arrow next-story-btn" aria-label="Next step">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+        </div>
+    </main>
+
+    <app-footer></app-footer>
+
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Custom Hexagon Video Modal Logic (Reels/Stories style)
+            const stories = [
+                {
+                    videoUrl: 'assets/production/vid_1 (podgotovka).mp4',
+                    audioUrl: 'assets/production/audio_1.mp3',
+                    titleKey: 'vid_label_1',
+                    fallbackTitle: 'Подготовка сырья'
+                },
+                {
+                    videoUrl: 'assets/production/vid_8 zameshivanie.mp4',
+                    audioUrl: 'assets/production/audio_3.mp3',
+                    titleKey: 'vid_label_3',
+                    fallbackTitle: 'Приготовление лосьона'
+                },
+                {
+                    videoUrl: 'assets/production/vid_3 propitka.mp4',
+                    audioUrl: 'assets/production/audio_5.mp3',
+                    titleKey: 'vid_label_5',
+                    fallbackTitle: 'Процесс пропитки'
+                },
+                {
+                    videoUrl: 'assets/production/vid_4 rabota oborudivaniya.mp4',
+                    audioUrl: 'assets/production/audio_4.mp3',
+                    titleKey: 'vid_label_4',
+                    fallbackTitle: 'Работа оборудования'
+                },
+                {
+                    videoUrl: 'assets/production/vid_6 Kontrol_kachestva.mp4',
+                    audioUrl: 'assets/production/audio_7.mp3',
+                    titleKey: 'vid_label_7',
+                    fallbackTitle: 'Контроль качества'
+                },
+                {
+                    videoUrl: 'assets/production/vid_7 logistika.mp4',
+                    audioUrl: 'assets/production/audio_8.mp3',
+                    titleKey: 'vid_label_8',
+                    fallbackTitle: 'Логистика и склад'
+                }
+            ];
+
+            let currentStoryIndex = 0;
+            let animationFrameId = null;
+            let pressTimer = null;
+            let isLongPress = false;
+            let startX = 0;
+            let startY = 0;
+
+            const videoModal = document.getElementById('video-modal');
+            const videoPlayer = document.getElementById('modal-video-player');
+            const videoSource = videoPlayer.querySelector('source');
+            const audioPlayer = document.getElementById('modal-audio-player');
+            const closeModalBtn = document.getElementById('video-modal-close');
+            const modalBackdrop = videoModal.querySelector('.video-modal-backdrop');
+            
+            const prevArrow = videoModal.querySelector('.prev-story-btn');
+            const nextArrow = videoModal.querySelector('.next-story-btn');
+            const modalContent = videoModal.querySelector('.video-modal-content');
+
+            if (audioPlayer) {
+                audioPlayer.onerror = () => {
+                    console.log("Audio track not found or failed to load. Playing video in silence.");
+                };
+            }
+
+            function initProgressBars() {
+                const container = document.getElementById('story-progress-container');
+                if (!container) return;
+                container.innerHTML = '';
+                stories.forEach((_, idx) => {
+                    const bar = document.createElement('div');
+                    bar.className = 'story-progress-bar';
+                    bar.innerHTML = `<div class="story-progress-bar-fill" id="story-fill-${idx}"></div>`;
+                    container.appendChild(bar);
+                });
+            }
+
+            function updateProgress() {
+                if (videoPlayer && videoPlayer.duration) {
+                    const progress = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+                    const currentFill = document.getElementById(`story-fill-${currentStoryIndex}`);
+                    if (currentFill) {
+                        currentFill.style.width = `${progress}%`;
+                    }
+                }
+                animationFrameId = requestAnimationFrame(updateProgress);
+            }
+
+            function showStory(index) {
+                if (index < 0 || index >= stories.length) {
+                    closeVideo();
+                    return;
+                }
+                
+                // Reset play indicator
+                const playIndicator = document.getElementById('story-play-indicator');
+                if (playIndicator) {
+                    playIndicator.classList.remove('is-visible');
+                }
+                
+                currentStoryIndex = index;
+                const story = stories[index];
+                
+                // Update header text
+                const stepNumEl = document.getElementById('story-step-num');
+                const stepTitleEl = document.getElementById('story-step-title');
+                
+                if (stepNumEl) {
+                    stepNumEl.innerText = `${String(index + 1).padStart(2, '0')}/${String(stories.length).padStart(2, '0')}`;
+                }
+                
+                if (stepTitleEl) {
+                    const lang = localStorage.getItem('hygiene_lang') || 'ru';
+                    const title = (translations && translations[lang] && translations[lang][story.titleKey]) || story.fallbackTitle;
+                    stepTitleEl.innerText = title;
+                }
+                
+                // Reset fills
+                for (let i = 0; i < stories.length; i++) {
+                    const fill = document.getElementById(`story-fill-${i}`);
+                    if (fill) {
+                        if (i < index) {
+                            fill.style.width = '100%';
+                        } else {
+                            fill.style.width = '0%';
+                        }
+                    }
+                }
+                
+                // Load & Play Video (strictly muted)
+                videoPlayer.pause();
+                videoSource.src = story.videoUrl;
+                videoPlayer.load();
+                videoPlayer.muted = true;
+                
+                videoPlayer.play().catch(err => console.log("Video playback blocked:", err));
+            }
+
+            function openVideo(index) {
+                document.body.style.overflow = 'hidden';
+                
+                initProgressBars();
+                
+                videoModal.style.display = 'flex';
+                videoModal.offsetHeight; // force reflow
+                videoModal.classList.add('is-active');
+                
+                // Play single continuous background track
+                if (audioPlayer) {
+                    audioPlayer.src = 'assets/production/audio_1.mp3';
+                    audioPlayer.loop = true;
+                    audioPlayer.load();
+                    audioPlayer.play().catch(e => console.log("Audio playback blocked:", e));
+                }
+                
+                showStory(index);
+                
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = requestAnimationFrame(updateProgress);
+            }
+
+            function closeVideo() {
+                videoModal.classList.remove('is-active');
+                videoPlayer.pause();
+                if (audioPlayer) {
+                    audioPlayer.pause();
+                    audioPlayer.currentTime = 0;
+                }
+                cancelAnimationFrame(animationFrameId);
+                
+                setTimeout(() => {
+                    videoModal.style.display = 'none';
+                    videoSource.src = '';
+                    if (audioPlayer) {
+                        audioPlayer.src = '';
+                        audioPlayer.load();
+                    }
+                    videoPlayer.load();
+                    document.body.style.overflow = '';
+                }, 400);
+            }
+
+            // Click listener for hexagon items
+            document.querySelectorAll('.hexagon-wrapper').forEach((hex, idx) => {
+                hex.addEventListener('click', () => {
+                    openVideo(idx);
+                });
+            });
+
+            if (closeModalBtn) closeModalBtn.addEventListener('click', closeVideo);
+            if (modalBackdrop) modalBackdrop.addEventListener('click', closeVideo);
+            
+            if (prevArrow) prevArrow.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showStory(currentStoryIndex - 1);
+            });
+            if (nextArrow) nextArrow.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showStory(currentStoryIndex + 1);
+            });
+
+            // Tap navigation zones (visual elements only, interactions handled by handleEnd)
+            const tapLeft = document.getElementById('story-tap-left');
+            const tapMiddle = document.getElementById('story-tap-middle');
+            const tapRight = document.getElementById('story-tap-right');
+
+            // Toggle play/pause permanently
+            function togglePlayPause() {
+                const playIndicator = document.getElementById('story-play-indicator');
+                if (videoPlayer.paused) {
+                    videoPlayer.play().catch(err => console.log(err));
+                    if (audioPlayer && audioPlayer.src) {
+                        audioPlayer.play().catch(err => console.log(err));
+                    }
+                    if (playIndicator) {
+                        playIndicator.classList.remove('is-visible');
+                    }
+                } else {
+                    videoPlayer.pause();
+                    if (audioPlayer) audioPlayer.pause();
+                    if (playIndicator) {
+                        playIndicator.classList.add('is-visible');
+                    }
+                }
+            }
+
+            // Long press to pause, touch gestures & swipe detection
+            if (modalContent) {
+                let wasPausedBeforePress = false;
+
+                const handleStart = (e) => {
+                    // Ignore clicks/touches on close button or navigation arrows
+                    if (e.target.closest('#video-modal-close') || e.target.closest('.story-nav-arrow')) {
+                        return;
+                    }
+                    
+                    const touch = e.touches ? e.touches[0] : e;
+                    startX = touch.clientX;
+                    startY = touch.clientY;
+                    isLongPress = false;
+                    wasPausedBeforePress = videoPlayer.paused;
+                    
+                    if (!wasPausedBeforePress) {
+                        pressTimer = setTimeout(() => {
+                            isLongPress = true;
+                            videoPlayer.pause();
+                            if (audioPlayer) audioPlayer.pause();
+                        }, 250); // 250ms threshold for long-press
+                    }
+                };
+
+                const handleEnd = (e) => {
+                    if (e.target.closest('#video-modal-close') || e.target.closest('.story-nav-arrow')) {
+                        return;
+                    }
+
+                    clearTimeout(pressTimer);
+                    
+                    const touch = e.changedTouches ? e.changedTouches[0] : e;
+                    const diffX = touch.clientX - startX;
+                    const diffY = touch.clientY - startY;
+
+                    // Swipe detection (horizontal swipe >= 50px)
+                    if (Math.abs(diffX) > 50 && Math.abs(diffY) < 100) {
+                        if (diffX > 0) {
+                            showStory(currentStoryIndex - 1);
+                        } else {
+                            showStory(currentStoryIndex + 1);
+                        }
+                        return;
+                    }
+
+                    if (isLongPress) {
+                        // Resume playing after hold-to-pause release
+                        if (!wasPausedBeforePress) {
+                            videoPlayer.play().catch(err => console.log(err));
+                            if (audioPlayer && audioPlayer.src) {
+                                audioPlayer.play().catch(err => console.log(err));
+                            }
+                        }
+                    } else {
+                        // Quick tap navigation or play/pause toggle based on click position
+                        const rect = modalContent.getBoundingClientRect();
+                        const clickX = touch.clientX - rect.left;
+                        const percentage = clickX / rect.width;
+
+                        if (percentage < 0.25) {
+                            showStory(currentStoryIndex - 1);
+                        } else if (percentage > 0.75) {
+                            showStory(currentStoryIndex + 1);
+                        } else {
+                            togglePlayPause();
+                        }
+                    }
+                };
+
+                modalContent.addEventListener('mousedown', handleStart);
+                modalContent.addEventListener('mouseup', handleEnd);
+                modalContent.addEventListener('touchstart', handleStart, { passive: true });
+                modalContent.addEventListener('touchend', handleEnd, { passive: true });
+            }
+
+            // Auto advance
+            videoPlayer.addEventListener('ended', () => {
+                showStory(currentStoryIndex + 1);
+            });
+            
+            // Close on escape
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && videoModal.classList.contains('is-active')) {
+                    closeVideo();
+                }
+            });
+
+            // Premium text reveal animation for the section title
+            const sectionTitle = document.querySelector('.section-header .section-title');
+            const sectionTag = document.querySelector('.section-header .section-tag');
+            
+            function initTitleReveal() {
+                if (!sectionTitle) return;
+                
+                // Get the text content
+                const text = sectionTitle.innerText.trim();
+                if (!text) return;
+                
+                // Split text into words, wrap each in overflow: hidden span mask
+                const words = text.split(/\s+/);
+                sectionTitle.innerHTML = words.map(word => {
+                    return `<span style="display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.2; padding-bottom: 4px; margin-bottom: -4px;">` +
+                           `<span class="reveal-word" style="display: inline-block;">${word}</span>` +
+                           `</span>`;
+                }).join(' ');
+                
+                const wordsEl = sectionTitle.querySelectorAll('.reveal-word');
+                
+                // Clear any existing scroll trigger if updating language
+                if (sectionTitle._revealTimeline) {
+                    sectionTitle._revealTimeline.kill();
+                }
+                
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: sectionTitle,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    }
+                });
+                
+                sectionTitle._revealTimeline = tl;
+                
+                // Animate section tag if present
+                if (sectionTag) {
+                    gsap.set(sectionTag, { clearProps: "all" });
+                    tl.fromTo(sectionTag, 
+                        { y: 15, opacity: 0 },
+                        { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
+                    );
+                }
+                
+                // Animate words sliding up with stagger
+                tl.fromTo(wordsEl, 
+                    { y: "105%", opacity: 0 },
+                    { y: "0%", opacity: 1, duration: 0.8, stagger: 0.05, ease: "power3.out" },
+                    sectionTag ? "-=0.4" : 0
+                );
+            }
+            
+            // Run on load with a slight delay to allow translations to settle
+            setTimeout(initTitleReveal, 200);
+            
+            // Re-run on language change
+            window.addEventListener('languageChanged', () => {
+                setTimeout(initTitleReveal, 100);
+            });
+        });
+    </script>
+</body>
+</html>
